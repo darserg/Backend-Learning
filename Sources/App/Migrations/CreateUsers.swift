@@ -12,7 +12,6 @@ struct CreateUsers: Migration {
         return database.schema("users")
             .id()
             .field("name", .string, .required)
-//            .field("age", .int, .required)
             .create()
     }
     

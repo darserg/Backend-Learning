@@ -16,12 +16,12 @@ struct UserController: RouteCollection {
     }
     
     
-    // /song route GET
+    // /user route GET
     func index(req: Request) throws -> EventLoopFuture<[User]> {
         return User.query(on: req.db).all()
     }
     
-    // /song route POST
+    // /user route POST
     func create(req: Request) throws -> EventLoopFuture<HTTPStatus> {
         let user = try req.content.decode(User.self)
         return user.save(on: req.db).transform(to: .ok)

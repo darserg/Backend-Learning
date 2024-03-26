@@ -17,9 +17,6 @@ final class User: Model, Content {
     @Field(key: "name")
     var name: String
     
-//    @Field(key: "age")
-//    var age: Int
-    
     
     init() {}
     
